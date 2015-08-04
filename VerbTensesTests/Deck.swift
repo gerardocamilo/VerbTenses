@@ -50,12 +50,13 @@ class Deck {
         
         var randomNumber = 0
         
-        
         repeat{
             randomNumber = Int(arc4random_uniform(UInt32(cards.count)))
         } while randomNumber == self.tempRandomNumber //Preventing the same tense to appear consecutively
         
         let randomCard: Dictionary<String, String> = cards[randomNumber]
+        
+        self.tempRandomNumber = randomNumber
         
         return randomCard
     }

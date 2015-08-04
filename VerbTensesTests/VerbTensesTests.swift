@@ -22,23 +22,29 @@ class VerbTensesTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testNoConsecutiveCardGenerated() {
 
-        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyboard.instantiateViewControllerWithIdentifier("ViewController") as! UIViewController
         var result:Bool = true
         
-        let m = Deck()
-        let card = m.getRandomCard()
-        let card2 = m.getRandomCard()
+        let myTestDeck = Deck()
+        var tempVal = 0
         
-        result = card["title"] != card2["title"]
-        result = result && (card["formula"] != card2["formula"])
-        result = result && (card["example"] != card2["example"])
+        repeat{
+        let card1 = myTestDeck.getRandomCard()
+        let card2 = myTestDeck.getRandomCard()
         
-        print(card)
-        print(card2)
-
+        result = card1["title"] != card2["title"]
+        result = result && (card1["formula"] != card2["formula"])
+        result = result && (card1["example"] != card2["example"])
+        tempVal++
+            
+        if result == false {
+            print(card1)
+            print(card2)
+        }
+            
+        }while result == true && tempVal <= 50
+        
         
         XCTAssert(result, "Pass")
     }
