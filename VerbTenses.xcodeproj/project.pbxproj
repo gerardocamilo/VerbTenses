@@ -13,7 +13,7 @@
 		822A17F71B50B16E005DA85A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822A17F61B50B16E005DA85A /* Images.xcassets */; };
 		822A17FA1B50B16E005DA85A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 822A17F81B50B16E005DA85A /* LaunchScreen.xib */; };
 		822A18061B50B16E005DA85A /* VerbTensesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822A18051B50B16E005DA85A /* VerbTensesTests.swift */; };
-		8285DD6A1B6E9173004954A4 /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285DD691B6E9173004954A4 /* MyModel.swift */; };
+		8285DD6A1B6E9173004954A4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285DD691B6E9173004954A4 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		822A17FF1B50B16E005DA85A /* VerbTensesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerbTensesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		822A18041B50B16E005DA85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		822A18051B50B16E005DA85A /* VerbTensesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTensesTests.swift; sourceTree = "<group>"; };
-		8285DD691B6E9173004954A4 /* MyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyModel.swift; path = VerbTensesTests/MyModel.swift; sourceTree = SOURCE_ROOT; };
+		8285DD691B6E9173004954A4 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deck.swift; path = VerbTensesTests/Deck.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		822A17EC1B50B16E005DA85A /* VerbTenses */ = {
 			isa = PBXGroup;
 			children = (
-				8285DD691B6E9173004954A4 /* MyModel.swift */,
+				8285DD691B6E9173004954A4 /* Deck.swift */,
 				822A17EF1B50B16E005DA85A /* AppDelegate.swift */,
 				822A17F11B50B16E005DA85A /* ViewController.swift */,
 				822A17F31B50B16E005DA85A /* Main.storyboard */,
@@ -217,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				822A17F21B50B16E005DA85A /* ViewController.swift in Sources */,
-				8285DD6A1B6E9173004954A4 /* MyModel.swift in Sources */,
+				8285DD6A1B6E9173004954A4 /* Deck.swift in Sources */,
 				822A17F01B50B16E005DA85A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
