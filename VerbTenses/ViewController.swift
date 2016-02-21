@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        //When 
         if event?.subtype == UIEventSubtype.MotionShake {
             generateNextTense()
         }
@@ -46,7 +47,6 @@ class ViewController: UIViewController {
         lblTitle.text = String()
         lblFormula.text = ""
         lblExample.text = String("")
-        //LOL
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

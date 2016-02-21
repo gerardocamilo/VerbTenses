@@ -25,31 +25,35 @@ class VerbTensesTests: XCTestCase {
     func testNoConsecutiveCardGenerated() {
 
         var result:Bool = true
-        
+        let howManyCards = 1000 //Times that method is going to be tested.
         let myTestDeck = Deck()
-        var tempVal = 0
+        var counter = 0
         
-        repeat{
-        let card1 = myTestDeck.getRandomCard()
-        let card2 = myTestDeck.getRandomCard()
+        self.measureBlock(){
+            repeat{
         
-        result = card1["title"] != card2["title"]
-        result = result && (card1["formula"] != card2["formula"])
-        result = result && (card1["example"] != card2["example"])
-        tempVal++
+                let card1 = myTestDeck.getRandomCard()
+                let card2 = myTestDeck.getRandomCard()
+        
+                // Validates if both elements are different
+                //TODO: Implement an "equals()" method in Deck class to replace this.
+                result = card1["title"] != card2["title"]
+                result = result && (card1["formula"] != card2["formula"])
+                result = result && (card1["example"] != card2["example"])
+                counter++
             
-        if result == false {
-            print(card1)
-            print(card2)
+                if result == false {
+                    print(card1)
+                    print(card2)
+                }
+            
+            } while result == true && counter <= howManyCards
         }
-            
-        }while result == true && tempVal <= 50
-        
         
         XCTAssert(result, "Pass")
     }
     
-    func testPerformanceExample() {
+    func testGetRandomCardPerformance() {
         // This is an example of a performance test case.
         self.measureBlock() {
             // Put the code you want to measure the time of here.
